@@ -137,7 +137,7 @@ export class AppComponent { }
 Now you can export your component module as `AppComponent`.
 
 
-## 5 Combining Everything.
+## 5. Combining Everything.
 
 1. Insert your component's selector's name into **index.html** `<body>`.
 2. Import `AppComponent` into `AppModule` as a dependency
