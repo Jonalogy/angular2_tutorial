@@ -2,7 +2,7 @@
 
 ## 1. My first Angular 2 app
 
-We're starting with the bare minimum setup for an app with angular 2 framework. We will need a few more setups.
+We're starting with the bare minimum setup for an app with angular 2 framework, lets do a few more setups.
 
 * Run `npm install` on terminal to install required dependencies.
 
@@ -58,6 +58,7 @@ import { BrowserModule } from '@angular/platform-browser';
 
 #### 3.2 Configuring your component
 Copy this after your dependencies:
+
 ```javascript
 @NgModule({
   imports:      [ BrowserModule ],
@@ -82,3 +83,56 @@ Now that you've created the root module successfully, we need to make import it 
 ```javascript
 import { AppModule } from '../app-module/app.module';
 ```
+
+## 4. My First Component
+
+Technically it is your second since AppModule is the root component. Lets start.
+
+#### 4.1 app.component.ts
+Within the `app` folder, create an appComponent directory and perform `touch app.component.ts` within it. **_Reminder_**: We are working only with (`.ts`) here.
+
+#### 4.2 Making your component known
+
+Every component has a `@Component` decorator and it needs a `Component` directive. Time to work that core, you know the drill:
+
+```javascript
+import { Component } from '@angular/core';
+```
+
+#### 4.3 Configuring That Thing
+
+Component configuration syntax:
+```javascript
+@Component({
+  selector: /* component-tag-name */ ,
+  templateUrl: './app.component.html',
+  /* or */ template: ' <!-- In HTML--> ' ,
+  styleUrls: ['./app.component.css'],
+/* or */ styles: [ /* css syntax here */ ]
+})
+```
+
+**Key notables:**
+* This component will be called using the declared selector e.g. `<component-tag-name>`
+* Either the template is declared using `template`:, or a html template is referred using `templateURL:`.
+* Styles must be encased within the tuples `[ ]` either in css syntax or a path to the file.
+
+For now, lets use the the following configuration:
+```javascript
+@Component({
+  selector: 'my-app',
+  templateUrl: 'app/app-component/app.component.html',
+  styleUrls: ['app/app-component/app.component.css']
+})
+```
+
+Create your own custom `app.component.html` and `app.component.css` within the app-component directory.
+
+#### 4.4 Class it
+
+We want to export our component, like before we need to make our component a class. All future logics will go within the curlies:
+```javascript
+export class AppComponent { }
+```
+
+## 5 Combining Everything.
