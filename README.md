@@ -15,7 +15,7 @@ For this course, we will be doing Angular 2 in typescript, ensure that your text
 ## 2. main.ts
 Angular's way of doing things is to break things down into _Modules_. These modules require a way to converge, and we will require `main.ts` for that.
 
-Create from terminal our **main.ts**: `touch main.ts` and copy the following into it. Do not worry about the code yet, just follow thru first.
+From terminal run `touch main.ts` to our _main.ts_ and copy the following code block into it. Do not worry about the code, just follow thru and you can read up more from the official docs. Our aim is to get you familiarized in navigating through components.
 
 ```javascript
 import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
@@ -65,9 +65,9 @@ Copy this after your dependencies:
   bootstrap:    [ AppComponent ]
 })
 ```
-* imports: This is where all the imported native libraries will be made known.
-* declarations: Where all the your the modules you created will be declared.
-* bootstrap: Usually, you will bootstrap only the AppComponent.
+* imports: This is where all the imported native libraries will be declared.
+* declarations: Declare all the modules you are to create here.
+* bootstrap: Usually, you will bootstrap only the AppComponent or root component.
 
 #### 3.3 AppModule Class
 The following syntax block belongs to the bottom of the file. This is suppose to hold the overlaying logic of your component module. Since we do not require the root component to do anything for now, just copy the following syntax for now.
@@ -76,4 +76,9 @@ The following syntax block belongs to the bottom of the file. This is suppose to
 export class AppModule { }
 ```
 
-#### 3.4 To Be Continued...
+#### 3.4 Almost there
+Now that you've created the root module successfully, we need to make import it to _main.ts_. This will be the only module you ever import into _main.ts_.
+
+```javascript
+import { AppModule } from '../app-module/app.module';
+```
