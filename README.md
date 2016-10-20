@@ -1,0 +1,79 @@
+# Angular 2 Crash Course
+
+## 1. My first Angular 2 app
+
+We're starting with the bare minimum setup for an app with angular 2 framework. We will need a few more setups.
+
+* Run `npm install` on terminal to install required dependencies.
+
+For this course, we will be doing Angular 2 in typescript, ensure that your text editor has typescript.  
+
+* For Atom users, install ** atom-typescript** package.
+* Once you have it installed, whenever you create a typescript file (`.ts`), it will create 2 more additional files (`.js.map`) and (`.js`).
+* **We will be working only with (`.ts`) files.**
+
+## 2. main.ts
+Angular's way of doing things is to break things down into _Modules_. These modules require a way to converge, and we will require `main.ts` for that.
+
+Create from terminal our **main.ts**: `touch main.ts` and copy the following into it. Do not worry about the code yet, just follow thru first.
+
+```javascript
+import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
+
+const platform = platformBrowserDynamic();
+
+platform.bootstrapModule(AppModule);
+```
+
+## 3. AppModule (Root Component)
+
+Every Angular 2 app has at least one component, the AppModule, also known as Root Component. All components will come together in AppModule. From terminal run `touch app.module.ts`.
+
+Ever component module has 3 main sections:
+1. Dependencies
+2. Configuration
+3. Module's Class
+
+#### 3.1 Importing your first Angular 2 native modules (Dependencies)
+
+Angular 2 identifies the AppModule as the root module with a _decorator_ called `@NgModule`. A decorator is simply a _directive_ prefixed with (`@`).
+
+> Importing Angular 2's libraries gives your module file access to the directives. All module imports **must** be declared at the top of the your working module file. In layman's terms, a _directive_ is just a specific instruction for Angular 2.
+
+Before we use `@NgModule`, we will need to bring in the directive's `core` library module.
+
+**Import syntax:**
+```javascript
+import { NgModule } from '@angular/core';
+```
+
+Great, one more practice! `BrowserModule` is a directive from Angular 2's core module called `platform browser`. It is necessary if your app is meant for browsers.
+
+```javascript
+import { BrowserModule } from '@angular/platform-browser';
+```
+> Full list of angular main [angular libraries](https://angular.io/docs/ts/latest/api/) can be found here.
+
+> Eventually, you will create your own modules and you will import them with the same syntax.
+
+#### 3.2 Configuring your component
+Copy this after your dependencies:
+```javascript
+@NgModule({
+  imports:      [ BrowserModule ],
+  declarations: [ AppComponent ],
+  bootstrap:    [ AppComponent ]
+})
+```
+* imports: This is where all the imported native libraries will be made known.
+* declarations: Where all the your the modules you created will be declared.
+* bootstrap: Usually, you will bootstrap only the AppComponent.
+
+#### 3.3 AppModule Class
+The following syntax block belongs to the bottom of the file. This is suppose to hold the overlaying logic of your component module. Since we do not require the root component to do anything for now, just copy the following syntax for now.
+
+```javascript
+export class AppModule { }
+```
+
+#### 3.4 To Be Continued...
