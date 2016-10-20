@@ -8,12 +8,12 @@ We're starting with the bare minimum setup for an app with angular 2 framework, 
 
 For this course, we will be doing Angular 2 in typescript, ensure that your text editor has typescript.  
 
-* For Atom users, install ** atom-typescript** package.
+* For Atom users, install **atom-typescript** package.
 * Once you have it installed, whenever you create a typescript file (`.ts`), it will create 2 more additional files (`.js.map`) and (`.js`).
 * **We will be working only with (`.ts`) files.**
 
 ## 2. main.ts
-Angular's way of doing things is to break things down into _Modules_. These modules require a way to converge, and we will require `main.ts` for that.
+Angular's way of doing things is to break things down into _Modules_. These modules require a way to converge, and we will require _main.ts_ for that.
 
 From terminal run `touch main.ts` to our _main.ts_ and copy the following code block into it. Do not worry about the code, just follow thru and you can read up more from the official docs. Our aim is to get you familiarized in navigating through components.
 
@@ -29,7 +29,7 @@ platform.bootstrapModule(AppModule);
 
 Every Angular 2 app has an AppModule. AppModule is a component, but it is easier to think of it as a root module because all components will come together in a component before tying into AppModule. From terminal run `touch app.module.ts`.
 
-Ever component module has 3 main sections:
+Every component module has 3 main sections:
 1. Dependencies
 2. Configuration
 3. Module's Class
@@ -52,7 +52,7 @@ Great, one more practice! `BrowserModule` is a directive from Angular 2's core m
 ```javascript
 import { BrowserModule } from '@angular/platform-browser';
 ```
-> Full list of angular main [angular libraries](https://angular.io/docs/ts/latest/api/) can be found here.
+> Full list of native [angular libraries](https://angular.io/docs/ts/latest/api/) can be found here.
 
 > Eventually, you will create your own modules and you will import them with the same syntax.
 
