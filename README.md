@@ -27,7 +27,7 @@ platform.bootstrapModule(AppModule);
 
 ## 3. AppModule (Root Component)
 
-Every Angular 2 app has at least one component, the AppModule, also known as Root Component. All components will come together in AppModule. From terminal run `touch app.module.ts`.
+Every Angular 2 app has an AppModule. AppModule is a component, but it is easier to think of it as a root module because all components will come together in a component before tying into AppModule. From terminal run `touch app.module.ts`.
 
 Ever component module has 3 main sections:
 1. Dependencies
@@ -86,7 +86,7 @@ import { AppModule } from '../app-module/app.module';
 
 ## 4. My First Component
 
-Technically it is your second since AppModule is the root component. Lets start.
+Technically it is your second since AppModule is the root component. We are creating the head component and by convention it is called AppComponent. All other components will tie up in this component before combining as a module in AppModule.
 
 #### 4.1 app.component.ts
 Within the `app` folder, create an appComponent directory and perform `touch app.component.ts` within it. **_Reminder_**: We are working only with (`.ts`) here.
@@ -134,5 +134,20 @@ We want to export our component, like before we need to make our component a cla
 ```javascript
 export class AppComponent { }
 ```
+Now you can export your component module as `AppComponent`.
+
 
 ## 5 Combining Everything.
+
+1. Insert your component's selector's name into **index.html** `<body>`.
+2. Import `AppComponent` into `AppModule` as a dependency
+
+```javascript
+import { AppComponent }   from '../app-component/app.component';
+```
+
+3. Declare it in `AppModule`'s configuration in declaration's array. All future child components should be declared here too.
+4. All future child components' selectors will be arranged in AppComponent's template file.
+5. Run `npm start`.
+
+Congratulations, you now have the basic understanding of Angular 2's components and its modular advantages.
