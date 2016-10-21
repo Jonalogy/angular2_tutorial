@@ -71,7 +71,7 @@ Copy this after your dependencies:
 * bootstrap: Usually, you will bootstrap only the AppComponent or root component.
 
 #### 3.3 AppModule Class
-The following syntax block belongs to the bottom of the file. This is suppose to hold the overlaying logic of your component module. Since we do not require the root component to do anything for now, just copy the following syntax for now.
+The following syntax block belongs to the bottom of the file. This is suppose to hold the overlaying logic of your component module. Since we do not require the root component to do anything, just copy the following syntax for now.
 
 ```javascript
 export class AppModule { }
