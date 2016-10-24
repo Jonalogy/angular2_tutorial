@@ -15,7 +15,7 @@ For this course, we will be doing Angular 2 in typescript, ensure that your text
 ## 2. main.ts
 Angular's way of doing things is to break things down into _Modules_. These modules require a way to converge, and we will require _main.ts_ for that.
 
-From terminal run `mkdir app/main` and `touch app/main.ts` then copy the following code block into it. Do not worry about the code, just follow thru and you can read up more from the official docs. Our aim is to get you familiarized in navigating through components.
+From terminal run `mkdir app/main` and `touch app/main/main.ts` then copy the following code block into it. Do not worry about the code, just follow thru and you can read up more from the official docs. Our aim is to get you familiarized in navigating through components.
 
 ```javascript
 import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
