@@ -2,7 +2,7 @@
 
 ## 1. My first Angular 2 app
 
-We're starting with the bare minimum setup for an app with angular 2 framework, lets do a few more setups.
+We're starting with the bare minimum for an app with angular 2 framework, lets do a few more setups.
 
 * Run `npm install` on terminal to install required dependencies.
 
@@ -15,7 +15,7 @@ For this course, we will be doing Angular 2 in typescript, ensure that your text
 ## 2. main.ts
 Angular's way of doing things is to break things down into _Modules_. These modules require a way to converge, and we will require _main.ts_ for that.
 
-From terminal run `touch main.ts` to our _main.ts_ and copy the following code block into it. Do not worry about the code, just follow thru and you can read up more from the official docs. Our aim is to get you familiarized in navigating through components.
+From terminal run `touch app/main.ts` to our _main.ts_ and copy the following code block into it. Do not worry about the code, just follow thru and you can read up more from the official docs. Our aim is to get you familiarized in navigating through components.
 
 ```javascript
 import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
@@ -27,7 +27,7 @@ platform.bootstrapModule(AppModule);
 
 ## 3. AppModule (Root Component)
 
-Every Angular 2 app has an AppModule. AppModule is a component, but it is easier to think of it as a root module because all components will come together in a component before tying into AppModule. From terminal run `touch app.module.ts`.
+Every Angular 2 app has an AppModule. AppModule is a component, but it is easier to think of it as a root module because all components will come together in a component before tying into AppModule. From terminal run `touch app/app.module.ts`.
 
 Every component module has 3 main sections:
 1. Dependencies
@@ -66,9 +66,11 @@ Copy this after your dependencies:
   bootstrap:    [ AppComponent ]
 })
 ```
+##### Metadata
 * imports: This is where all the imported native libraries will be declared.
 * declarations: Declare all the modules you are to create here.
 * bootstrap: Usually, you will bootstrap only the AppComponent or root component.
+> Angular2 has more metadata for configuration, but we will keep things simple for now.
 
 #### 3.3 AppModule Class
 The following syntax block belongs to the bottom of the file. This is suppose to hold the overlaying logic of your component module. Since we do not require the root component to do anything, just copy the following syntax for now.
@@ -89,7 +91,7 @@ import { AppModule } from '../app-module/app.module';
 Technically it is your second since AppModule is the root component. We are creating the head component and by convention it is called AppComponent. All other components will tie up in this component before combining as a module in AppModule.
 
 #### 4.1 app.component.ts
-Within the `app` folder, create an appComponent directory and perform `touch app.component.ts` within it. **_Reminder_**: We are working only with (`.ts`) here.
+Within the `app` folder, create an appComponent directory and perform `touch app/app.component.ts` within it. **_Reminder_**: We are working only with (`.ts`) here.
 
 #### 4.2 Making your component known
 
