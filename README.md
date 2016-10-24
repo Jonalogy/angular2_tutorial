@@ -2,7 +2,7 @@
 
 ## 1. My first Angular 2 app
 
-We're starting with the bare minimum for an app with angular 2 framework, lets do a few more setups.
+We're starting with the bare minimum for an app with angular 2 framework adapted from Angular 2's [Quickstart tutorial](https://angular.io/docs/ts/latest/quickstart.html), lets do a few more setups.
 
 * Run `npm install` on terminal to install required dependencies.
 
